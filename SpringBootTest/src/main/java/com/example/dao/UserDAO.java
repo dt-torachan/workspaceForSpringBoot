@@ -28,7 +28,12 @@ public class UserDAO {
 				model.addAttribute("phone", rs.getString("phone"));
 				model.addAttribute("mail", rs.getString("mail"));
 				model.addAttribute("privilege", rs.getInt("privilege"));
-			}else {
+				
+				if(!model.getAttribute("id").equals(id) || !model.getAttribute("password").equals(password)){
+					model.addAttribute("errormessage", "IDまたはパスワードが正しくありません");
+				}
+				
+			}else{
 				model.addAttribute("errormessage", "登録されていないIDです");
 			}
 		}catch(SQLException e) {

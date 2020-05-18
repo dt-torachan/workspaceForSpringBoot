@@ -22,11 +22,8 @@ public class AuthController {
 		
 		if(model.getAttribute("errormessage") != null) {
 			return "entry";
-		}else if(!model.getAttribute("id").equals(id) || !model.getAttribute("password").equals(password)){
-			model.addAttribute("errormessage", "IDまたはパスワードが正しくありません");
-			return "entry";
 		}else {
-			return "login";
+			return "mypage";
 		}
 	}
 	
