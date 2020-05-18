@@ -10,13 +10,6 @@ import com.example.service.ParamObjectService;
 
 @Controller
 public class DemoController {
-
-	@RequestMapping(value="/")
-	public String entry() {
-		
-		return "entry";
-		
-	}
 	
 	@RequestMapping(value="/prime")
 	public String login(@ModelAttribute ParamObjectService param , Model model) {

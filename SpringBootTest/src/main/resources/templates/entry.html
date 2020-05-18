@@ -7,20 +7,22 @@
 <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
 <script type="text/javascript" th:src="@{/js/jquery-3.5.1.js}"></script>
 <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
-<title>素数判定　：　入力</title>
+<title>エンジニア専門整体師</title>
 
 </head>
 
 <body>
 
-	<div class="mx-auto" style="width: 300px;" >
-		<form action = "/prime" method = "post">
-			<p>4桁までの自然数を入力してください</p>
-			<p>※０は自然数に含みません(炎上)</p>
-			<input type = "text" name = "id"><br/>
-			<!-- <input type = "text" name = "password"><br/> 
-			<button type = "submit">送信</button> -->
-			<button type = "submit" class="btn btn-success">素数かどうかを判定する！</button>
+	<div class="mx-auto py-lg-5" style="width: 300px;" >
+		<form action = "/login" method = "post">
+			<p style="text-align:center;">IDとパスワードを入力してください</p>
+			<p style="text-align:center;" th:text =${errormessage}/>
+			<div class="text-center"><input type = "text" name = "id" placeholder = "ID" style="width: 300px;"></div><br/>
+			<div class="text-center"><input type = "text" name = "password" placeholder = "password" style="width: 300px;"></div><br/> 
+			<div class="text-center py-lg-1"><button type = "submit" class="btn btn-primary">ログイン</button></div>
+		</form>
+		<form action = "/registration">
+			<div class="text-center"><button type = "submit" class="btn btn-secondary">新規登録</button></div>
 		</form>
 	</div>
 	
