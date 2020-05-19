@@ -32,7 +32,6 @@ public class UserDAO {
 				if(!model.getAttribute("id").equals(id) || !model.getAttribute("password").equals(password)){
 					model.addAttribute("errormessage", "IDまたはパスワードが正しくありません");
 				}
-				
 			}else{
 				model.addAttribute("errormessage", "登録されていないIDです");
 			}
