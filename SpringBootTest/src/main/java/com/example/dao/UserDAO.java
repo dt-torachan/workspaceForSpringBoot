@@ -17,7 +17,7 @@ public class UserDAO {
 	@Transactional
 	public Model searchById(@RequestParam("id") String id,@RequestParam("password") String password,Model model) {
 		try {
-			Connection conn = DriverManager.getConnection("postgres://ricbhkslwxzrqj:5cda005554442a939f9c68973f02ec0bc748280e632c11f0fdbaccfd8fcb9b9a@ec2-3-222-30-53.compute-1.amazonaws.com:5432/d3ebsimt1afacu");
+			Connection conn = DriverManager.getConnection("jdbc:postgres://ricbhkslwxzrqj:5cda005554442a939f9c68973f02ec0bc748280e632c11f0fdbaccfd8fcb9b9a@ec2-3-222-30-53.compute-1.amazonaws.com:5432/d3ebsimt1afacu");
 			PreparedStatement pstmt = conn.prepareStatement("select * from users where id = ?");
 			pstmt.setString(1, id);
 						ResultSet rs = pstmt.executeQuery();
