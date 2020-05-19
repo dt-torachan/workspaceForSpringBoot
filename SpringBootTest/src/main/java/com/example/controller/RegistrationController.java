@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class RegistrationController {
 	
-	@RequestMapping(value="/registration")
+	@RequestMapping(value="/registrationEntry")
 	public String registration() {
 		return "registration";
 	}
