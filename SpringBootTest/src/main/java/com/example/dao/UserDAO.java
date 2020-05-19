@@ -36,8 +36,7 @@ public class UserDAO {
 				model.addAttribute("errormessage", "登録されていないIDです");
 			}
 		}catch(SQLException e) {
-			model.addAttribute("errormessage", "ログインエラーが発生しました");
-			e.printStackTrace();
+			model.addAttribute("errormessage", e);
 		}
 			return model;
 	}
